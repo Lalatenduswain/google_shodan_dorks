@@ -1,0 +1,42 @@
+1. Finding Index Files:
+
+ssl.cert.subject.CN:"target.com" http.title:"index of /"
+
+2. Finding Admin Panel:
+ssl.cert.subject.CN:"*.target.com"+200 http.title:"Admin"
+
+3. Direct FTP Login:
+
+ssl.cert.subject.CN:*.target.com" "230 login successful" port:"21"
+
+4. Exposed API Key:
+
+http.html:"xoxb-"
+
+5. Finding Jenkins Server via Favicon:
+
+ssl:"*.hydroshare.org" http.favicon.hash:81586312
+
+Here you can find multiple services favicon hashesh :-
+
+https://lnkd.in/g7V6PsaJ
+
+6. Finding Grafana Dashboard:
+
+http.title:"Grafana"
+
+7. Search Particular CVE:
+
+vuln:CVE-2014-0160
+
+8. Search Particular Ports and Services:
+
+ssh -port:22
+
+9. Airbyte panel bypass
+
+http.title:"Airbyte" 200
+
+10. XSS Vulnerability via Citrix Gateway:
+
+ssl:"domain.com" 200 http.title:"citrix gateway"
